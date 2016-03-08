@@ -1,0 +1,30 @@
+<% breadcrumb :categories %>
+<div class="example" data-text="Categories">
+  <div class="grid no-margin-top">
+    <% @categories.in_groups_of(@row_count).each do |group| %>
+      <div class="row cells<%= @row_count %>">
+      <% group.each do |category| %>
+        <div class="cell">
+          <h4><%= category.name %></h4>
+          <div class="image-container">
+            <div class="frame">
+              <!--<%= image_tag(category.image_url(:thumb)) %>-->
+              <a href="<%= articles_path(category_id: category.id) %>"><img src="/assets/404.jpg"></a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+$(function() {
+    $(".image-container").hover(function() {
+      $(this).addClass("element-selected");
+    }, function() {
+      $(this).removeClass("element-selected");
+    });
+});
+</script>
