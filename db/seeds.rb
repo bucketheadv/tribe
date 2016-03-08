@@ -11,7 +11,8 @@ begin
   10.times do |i|
     Article.create(id: i + 1, title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph)
   end
-rescue 
+rescue => e
+  p e
 end
 
 begin

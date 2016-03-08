@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Tribe Admin</title>
+  <%= stylesheet_link_tag :application %>
+  <%= javascript_include_tag :application %>
+  <%= csrf_meta_tag %>
+</head>
+<body class=''>
+<%= render 'layouts/admin/header' %>
+<div class="page-content">
+  <div class="flex-grid no-responsive-future" style="height: 100%;">
+    <div class="row" style="height: 100%">
+      <%= render 'layouts/admin/left' %>
+      <div class="cell auto-size padding20 bg-white" id="cell-content">
+        <%= render 'layouts/admin/message' %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

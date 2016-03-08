@@ -2,6 +2,14 @@ Rails.application.routes.draw do
 
   root to: 'articles#index'
 
+  resources :welcome do
+    collection do 
+      get :tags
+      get :archive
+      get :photos
+    end
+  end
+
   resources :articles do
     collection do
       get 'more'
@@ -10,6 +18,9 @@ Rails.application.routes.draw do
   resources :categories, only: [:index]
 
   get 'locale' => 'application#locale'
+  namespace :admin do 
+    resources :articles
+  end
   get '*path' => 'application#render_404'
 
   # The priority is based upon order of creation: first created -> highest priority.

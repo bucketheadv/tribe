@@ -1,0 +1,17 @@
+<% if flash.any? %>
+<div class="example">
+  <div class="grid">
+    <div class="row cells4">
+      <% flash.each do |k, v| %>
+        <div class="notify <%= k %>">
+          <span class="nofity-closer"></span>
+          <span class="nofity-success"></span>
+          <span class="nofity-text">
+            <%= v %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

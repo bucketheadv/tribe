@@ -17,6 +17,15 @@ crumb :categories do
   parent :root
 end
 
+crumb :tags do 
+  link "Tags", tags_welcome_index_path
+  parent :root
+end
+
+crumb :archive do 
+  link "Archive", archive_welcome_index_path
+  parent :root
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end

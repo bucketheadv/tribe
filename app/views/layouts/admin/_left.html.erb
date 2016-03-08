@@ -1,0 +1,13 @@
+<div class="cell size-x200" id="cell-sidebar" style="background-color: #71b1d1; height: 100%">
+  <ul class="sidebar">
+    <li class="<%= active?(admin_articles_path) %>">
+    <a href="<%= admin_articles_path %>">
+      <span class="mif-apps icon"></span>
+      <span class="title">Articles</span>
+      <span class="counter">
+        <%= Article.count %>
+      </span>
+    </a>
+    </li>
+  </ul>
+</div>

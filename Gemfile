@@ -52,3 +52,5 @@ gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
 gem 'carrierwave'
 gem 'gretel' # For breadcrumb
 gem 'kaminari'
+gem 'foreman'
+gem 'puma'

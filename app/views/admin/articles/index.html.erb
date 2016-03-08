@@ -1,0 +1,44 @@
+<h1 class="text-light">Articles</h1>
+<hr class="thin bg-grayLighter">
+<a class="button primary" href="<%= new_admin_article_path %>">
+  <span class="mif-plus"></span>
+  Create...
+</a>
+<%= paginate @articles %>
+<hr class="thin bg-grayLighter"></hr>
+<% if @articles.any? %>
+  <div class="dataTables_wrapper no-footer">
+    <table class="dataTable border bordered no-footer" data-auto-width="false" data-role="" role="grid" aria-describedby="">
+      <thead>
+        <tr role="row">
+          <td style="width: 20px" tabindex="0">ID</td>
+          <td>Title</td>
+          <td>Body</td>
+          <td>Created At</td>
+          <td>Updated At</td>
+          <td>Operation</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each_with_index do |art, idx| %>
+          <tr class="<%= idx % 2 == 1 ? 'odd' : 'even' %>" role="row">
+            <td><%= art.id %></td>
+            <td><%= art.title %></td>
+            <td><%= art.body %></td>
+            <td><%= art.created_at.to_s(:db) %></td>
+            <td><%= art.updated_at.to_s(:db) %></td>
+            <td>
+              <%= link_to "Edit", edit_admin_article_path(art) %>
+              <%= link_to "Destroy", [:admin, art], method: :delete, data: {confirm: 'Are you sure?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <div>
+    Sorry, there is no data.
+  </div>
+<% end %>
+<%= paginate @articles %>

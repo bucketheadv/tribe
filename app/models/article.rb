@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
   belongs_to :category
-  validates :name, presence: true
+  validates :title, presence: true
   paginates_per 5
 
   class << self
