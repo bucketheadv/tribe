@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   def tags
   end
 
-  def photos
+  def album
   end
 
   def archive

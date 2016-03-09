@@ -2,13 +2,9 @@ Rails.application.routes.draw do
 
   root to: 'articles#index'
 
-  resources :welcome do
-    collection do 
-      get :tags
-      get :archive
-      get :photos
-    end
-  end
+  get '/tags' => 'welcome#tags'
+  get '/archive' => 'welcome#archive'
+  get '/album' => 'welcome#album'
 
   resources :articles do
     collection do

@@ -19,11 +19,26 @@
       </div>
     </div>
     <div class="grid">
-      <%= f.label :publish_status %>
-      <%= f.check_box :publish_status %>
+      <%= f.label :tags %>
+      <div class="input-control text full-size">
+        <%= f.text_field :tag_list, value: @article.tag_list.join(",") %>
+      </div>
+    </div>
+    <div class="grid">
+      <%= f.label :published %>
+      <%= f.check_box :published %>
     </div>
     <div class="grid">
       <%= f.submit %>
     </div>
   <% end %>
 </div>
+
+<script>
+$(function() {
+  $("#article_tag_list").tagsInput({
+    width: 'auto',
+    height: 'auto'
+  });
+});
+</script>

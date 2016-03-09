@@ -1,1 +1,17 @@
 <% breadcrumb :archive %>
+
+<div class="example">
+  <div class="cell">
+    <% if archive_dates.any? %>
+      <ul class="numeric-list large-bullet red-bullet">
+        <% archive_dates.each do |date| %>
+          <li><%= link_to date["created_at"], articles_path(pub_date: date["created_at"]) %>(<%= date["cnt"] %>)</li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div>
+        No Data.
+      </div>
+    <% end %>
+  </div>
+</div>

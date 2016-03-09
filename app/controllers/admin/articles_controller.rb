@@ -26,7 +26,7 @@ class Admin::ArticlesController < AdminController
 
   protected
   def article_params
-    params.require(:article).permit(:title, :body, :category_id, :publish_status)
+    params.require(:article).permit(:title, :body, :category_id, :published, :tag_list)
   end
   def set_article
     @article = Article.find(params[:id])

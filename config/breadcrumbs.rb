@@ -18,12 +18,17 @@ crumb :categories do
 end
 
 crumb :tags do 
-  link "Tags", tags_welcome_index_path
+  link "Tags", tags_path
   parent :root
 end
 
 crumb :archive do 
-  link "Archive", archive_welcome_index_path
+  link "Archive", archive_path
+  parent :root
+end
+
+crumb :album do
+  link "Album", album_path
   parent :root
 end
 # crumb :projects do

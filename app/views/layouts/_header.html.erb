@@ -1,9 +1,9 @@
 <header class="margin20 no-margin-left no-margin-right">
   <div class="clear-float">
     <div class="place-right">
-      <form>
+      <form action="<%= articles_path %>">
         <div class="input-control text margin20" style="width: 300px;">
-          <input type="text" name="q" placeholder="">
+          <input type="text" name="q" value="<%= params[:q] %>" placeholder="">
           <button class="button"><span class="mif-search"></span></button>
         </div>
       </form>
@@ -17,9 +17,9 @@
     <ul class='horizontal-menu' style='margin-left: -20px;'>
       <li><a href="<%= articles_path %>">文章</a><li>
       <li><a href="<%= categories_path %>">分类</a><li>
-      <li><a href="<%= tags_welcome_index_path %>">标签</a><li>
-      <li><a href="<%= archive_welcome_index_path %>">归档</a><li>
-      <li><a href="#">照片</a><li>
+      <li><a href="<%= tags_path %>">标签</a><li>
+      <li><a href="<%= archive_path %>">归档</a><li>
+      <li><a href="<%= album_path %>">相册</a><li>
       <li class='place-right'>
         <a href='#' class='dropdown-toggle'>多语言</a>
         <ul class='d-menu place-right' data-role='dropdown'>
