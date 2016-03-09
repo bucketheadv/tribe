@@ -53,7 +53,7 @@ gem 'carrierwave'
 gem 'gretel' # For breadcrumb
 gem 'kaminari'
 gem 'foreman'
-gem 'puma'
+# gem 'puma'
 gem 'acts-as-taggable-on'
 gem 'tagsinput-rails'
 gem 'dalli'

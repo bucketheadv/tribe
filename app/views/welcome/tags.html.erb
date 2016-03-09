@@ -2,16 +2,20 @@
 
 <div class="example">
   <div class="grid no-margin-top">
-    <% all_tags.in_groups_of(4) do |tags| %>
-      <div class="row cells4">
-        <% tags.each do |ta| %>
-          <% next if ta.nil? %>
-          <div class="cell">
-            <% color = tag_color(ta) %>
-            <a href="<%= articles_path(tag: ta.name) %>" class="button <%= color %> block-shadow-<%= color %> text-shadow"><%= ta.name %>(<%= ta.taggings_count %>)</a>
-          </div>
-        <% end %>
-      </div>
+    <% if all_tags.any? %>
+      <% all_tags.in_groups_of(4) do |tags| %>
+        <div class="row cells4">
+          <% tags.each do |ta| %>
+            <% next if ta.nil? %>
+            <div class="cell">
+              <% color = tag_color(ta) %>
+              <a href="<%= articles_path(tag: ta.name) %>" class="button <%= color %> block-shadow-<%= color %> text-shadow"><%= ta.name %>(<%= ta.taggings_count %>)</a>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% else %>
+      <div>No Data.</div>
     <% end %>
   </div>
 </div>

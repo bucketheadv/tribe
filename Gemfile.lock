@@ -97,7 +97,6 @@ GEM
     mysql2 (0.4.3)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    puma (3.0.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -200,7 +199,6 @@ DEPENDENCIES
   kaminari
   metro_ui_rails!
   mysql2 (>= 0.3.13, < 0.5)
-  puma
   quiet_assets
   rails (= 4.2.5.1)
   rspec-rails

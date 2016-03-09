@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show]
   def index
-    @articles = Article.query(params).page(params[:page] || 1)
+    @articles = Article.query(params).published.page(params[:page] || 1)
   end
 
   def show
