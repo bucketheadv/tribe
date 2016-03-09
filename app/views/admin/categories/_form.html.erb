@@ -1,0 +1,24 @@
+<div class="example">
+  <%= render 'errors/form_error', model: @category %>
+  <%= form_for [:admin, @category] do |f| %>
+    <div class="grid">
+      <%= f.label :name %>
+      <div class="input-control text full-size">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="grid">
+      <%= f.label :image %>
+      <div class="input-control file full-size" data-role='input'>
+        <%= f.file_field :image %>
+        <button class="button">
+          <span class="mif-folder"></span>
+        </button>
+      </div>
+      <%= image_tag(@category.image_url(:thumb)) if @category.image.present? %>
+    </div>
+    <div class="grid">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

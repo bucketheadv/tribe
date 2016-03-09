@@ -8,8 +8,7 @@
           <h4><%= category.name %></h4>
           <div class="image-container">
             <div class="frame">
-              <!--<%= image_tag(category.image_url(:thumb)) %>-->
-              <a href="<%= articles_path(category_id: category.id) %>"><img src="/assets/404.jpg"></a>
+              <a href="<%= articles_path(category_id: category.id) %>"><%= image_tag(category.image_url(:normal)) %></a>
             </div>
           </div>
         </div>

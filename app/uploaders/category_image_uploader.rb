@@ -4,7 +4,7 @@ class CategoryImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
@@ -37,7 +37,11 @@ class CategoryImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :scale => [50, 50]
+    process :resize_to_limit => [50, 50]
+  end
+
+  version :normal do
+    process :resize_to_limit => [250, 200]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

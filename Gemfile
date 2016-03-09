@@ -50,6 +50,7 @@ end
 
 gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'gretel' # For breadcrumb
 gem 'kaminari'
 gem 'foreman'

@@ -1,0 +1,44 @@
+<h1 class="text-light">Categories</h1>
+<hr class="thin bg-grayLighter">
+<a class="button primary" href="<%= new_admin_category_path %>">
+  <span class="mif-plus"></span>
+  Create...
+</a>
+<%= paginate @categories %>
+<hr class="thin bg-grayLighter"></hr>
+<% if @categories.any? %>
+  <div class="dataTables_wrapper no-footer">
+    <table class="dataTable border bordered no-footer" data-auto-width="false" data-role="" role="grid" aria-describedby="">
+      <thead>
+        <tr role="row">
+          <td style="width: 20px" tabindex="0">ID</td>
+          <td>Image</td>
+          <td>Name</td>
+          <td>Created At</td>
+          <td>Updated At</td>
+          <td>Operation</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @categories.each_with_index do |cat, idx| %>
+          <tr class="<%= idx % 2 == 1 ? 'odd' : 'even' %>" role="row">
+            <td><%= cat.id %></td>
+            <td><%= image_tag(cat.image_url(:thumb)) %></td>
+            <td><%= cat.name %></td>
+            <td><%= cat.created_at.to_s(:db) %></td>
+            <td><%= cat.updated_at.to_s(:db) %></td>
+            <td>
+              <%= link_to "Edit", edit_admin_category_path(cat) %>
+              <%= link_to "Destroy", [:admin, cat], method: :delete, data: {confirm: 'Are you sure?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <div>
+    Sorry, there is no data.
+  </div>
+<% end %>
+<%= paginate @categories %>

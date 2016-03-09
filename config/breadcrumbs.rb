@@ -31,6 +31,11 @@ crumb :album do
   link "Album", album_path
   parent :root
 end
+
+crumb :about do 
+  link "About Me", about_path
+  parent :root
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end

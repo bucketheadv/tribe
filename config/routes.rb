@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/tags' => 'welcome#tags'
   get '/archive' => 'welcome#archive'
   get '/album' => 'welcome#album'
+  get '/about' => 'welcome#about'
 
   resources :articles do
     collection do

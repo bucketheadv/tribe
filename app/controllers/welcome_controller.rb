@@ -10,4 +10,7 @@ class WelcomeController < ApplicationController
 
   def archive
   end
+
+  def about
+  end
 end

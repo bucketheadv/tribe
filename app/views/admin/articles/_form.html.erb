@@ -1,4 +1,5 @@
 <div class="example">
+  <%= render 'errors/form_error', model: @category %>
   <%= form_for [:admin, @article] do |f| %>
     <div class="grid">
       <%= f.label :title %>

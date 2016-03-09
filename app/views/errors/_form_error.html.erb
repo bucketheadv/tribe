@@ -1,0 +1,7 @@
+<div>
+  <% if model.errors.present? %>
+    <% model.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+</div>
