@@ -1,6 +1,6 @@
 module ApplicationHelper
   def active?(path)
-    if request.path == path 
+    if params[:controller] == path 
       "active"
     end
   end

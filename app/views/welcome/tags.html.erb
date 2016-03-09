@@ -3,7 +3,7 @@
 <div class="example">
   <div class="grid no-margin-top">
     <% if all_tags.any? %>
-      <% all_tags.in_groups_of(4) do |tags| %>
+      <% all_tags.each_slice(4) do |tags| %>
         <div class="row cells4">
           <% tags.each do |ta| %>
             <% next if ta.nil? %>

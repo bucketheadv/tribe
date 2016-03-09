@@ -1,10 +1,9 @@
 <% breadcrumb :categories %>
 <div class="example" > <!-- data-text="Categories" -->
   <div class="grid no-margin-top">
-    <% @categories.in_groups_of(@row_count).each do |group| %>
+    <% @categories.each_slice(@row_count).each do |group| %>
       <div class="row cells<%= @row_count %>">
       <% group.each do |category| %>
-        <% next if category.nil? %>
         <div class="cell">
           <h4><%= category.name %></h4>
           <div class="image-container">

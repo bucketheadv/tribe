@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'locale' => 'application#locale'
   namespace :admin do 
     resources :articles
+    resources :categories
   end
   get '*path' => 'application#render_404'
 
