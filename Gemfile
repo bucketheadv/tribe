@@ -48,13 +48,16 @@ group :development do
   gem 'quiet_assets'
 end
 
-gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'gretel' # For breadcrumb
-gem 'kaminari'
+gem 'metro_ui_rails' #, github: 'sven199109/metro_ui_rails'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~>4.4.0'
+gem 'gretel', '~> 3.0.8' # For breadcrumb
+gem 'kaminari', '~> 0.16.3'
 gem 'foreman'
 # gem 'puma'
-gem 'acts-as-taggable-on'
-gem 'tagsinput-rails'
-gem 'dalli'
+gem 'acts-as-taggable-on', '~> 3.5.0'
+gem 'tagsinput-rails', '~> 1.3.3'
+gem 'dalli', '~> 2.7.6'
+gem 'rdiscount', '~> 2.1.8'
+#gem 'pagedown-rails'
+gem 'simditor_rails', '~> 0.0.1'

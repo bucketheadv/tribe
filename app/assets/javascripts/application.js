@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require jquery.tagsinput
 //= require turbolinks
+//= require simditor-ui
 //= require metro
 //= require_tree .

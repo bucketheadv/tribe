@@ -19,7 +19,7 @@
           <hr class="bg-red"></hr>
           <div>
             <h4>
-              <%= @article.body %>
+              <%= sanitize(@article.body) %>
             </h4>
           </div>
         </ul>

@@ -25,7 +25,7 @@
           <tr class="<%= idx % 2 == 1 ? 'odd' : 'even' %>" role="row">
             <td><%= art.id %></td>
             <td><%= art.title %></td>
-            <td><%= art.body %></td>
+            <td><%= strip_tags(art.body) %></td>
             <td class="align-center"><span class="<%= (art.published ? "mif-checkmark fg-green" : "mif-stop fg-red").html_safe %>"></span></td>
             <td><%= art.created_at.to_s(:db) %></td>
             <td><%= art.updated_at.to_s(:db) %></td>

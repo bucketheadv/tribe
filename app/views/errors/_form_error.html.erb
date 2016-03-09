@@ -1,7 +1,17 @@
 <div>
   <% if model.errors.present? %>
-    <% model.errors.full_messages.each do |error| %>
-      <%= error %>
-    <% end %>
+    <div class="grid">
+      <div class="row cells4">
+        <% model.errors.full_messages.each do |error| %>
+          <div class="notify alert">
+            <span class="notify-closer"></span>
+            <span class="notify-title"></span>
+            <span class="notify-text">
+              <%= error %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>

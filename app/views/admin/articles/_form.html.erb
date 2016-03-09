@@ -1,6 +1,6 @@
 <div class="example">
-  <%= render 'errors/form_error', model: @category %>
   <%= form_for [:admin, @article] do |f| %>
+    <%= render 'errors/form_error', model: @article %>
     <div class="grid">
       <%= f.label :title %>
       <div class="input-control text full-size">
@@ -41,5 +41,11 @@ $(function() {
     width: 'auto',
     height: 'auto'
   });
+  editor = new Simditor({
+    textarea: $("#article_body"),
+  });
+  //var converter = Markdown.getSanitizingConverter();
+  //var editor = new Markdown.Editor(converter);
+  //editor.run();
 });
 </script>

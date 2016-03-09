@@ -8,6 +8,17 @@ class Admin::ArticlesController < AdminController
     @article = Article.new
   end
 
+  def create
+    @article = Article.new(article_params)
+    if @article.save
+      flash[:success] = "Article saved."
+      redirect_to action: :index
+    else
+      flash.now[:error] = "Article save failed."
+      render :new
+    end
+  end
+
   def edit
   end
 
