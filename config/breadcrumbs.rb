@@ -1,9 +1,9 @@
 crumb :root do
-  link "Home", root_path
+  link t("site.home"), root_path
 end
 
 crumb :articles do
-  link "Articles", articles_path
+  link t("site.articles"), articles_path
   parent :root
 end
 
@@ -13,27 +13,27 @@ crumb :article do |article|
 end
 
 crumb :categories do
-  link "Categories", categories_path
+  link t("site.categories"), categories_path
   parent :root
 end
 
 crumb :tags do 
-  link "Tags", tags_path
+  link t("site.tags"), tags_path
   parent :root
 end
 
 crumb :archive do 
-  link "Archive", archive_path
+  link t("site.archives"), archive_path
   parent :root
 end
 
 crumb :album do
-  link "Album", album_path
+  link t("site.albums"), album_path
   parent :root
 end
 
 crumb :about do 
-  link "About Me", about_path
+  link t("site.about"), about_path
   parent :root
 end
 # crumb :projects do

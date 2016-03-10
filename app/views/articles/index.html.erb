@@ -9,8 +9,7 @@
             <%= link_to article.title, article %>
             </p>
             <small>
-              发布于 
-              <cite><%= time_ago_in_words(article.created_at) %></cite>
+              <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>
             </small>
           </blockquote>
           <hr class='thin'></hr>

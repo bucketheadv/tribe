@@ -9,22 +9,22 @@
       </form>
     </div>
     <a class='place-left' href='/' title=''>
-      <h1>斯文部落</h1>
+      <h1><%= t('site.name') %></h1>
     </a>
   </div>
 
   <div class="main-menu-wrapper">
     <ul class='horizontal-menu' style='margin-left: -20px;'>
-      <li><a href="<%= articles_path %>">文章</a><li>
-      <li><a href="<%= categories_path %>">分类</a><li>
-      <li><a href="<%= tags_path %>">标签</a><li>
-      <li><a href="<%= archive_path %>">归档</a><li>
-      <li><a href="<%= album_path %>">相册</a><li>
+      <li><a href="<%= articles_path %>"><%= t('site.articles') %></a><li>
+      <li><a href="<%= categories_path %>"><%= t('site.categories') %></a><li>
+      <li><a href="<%= tags_path %>"><%= t('site.tags') %></a><li>
+      <li><a href="<%= archive_path %>"><%= t('site.archives') %></a><li>
+      <li><a href="<%= album_path %>"><%= t('site.albums') %></a><li>
       <li class='place-right'>
-        <a href='#' class='dropdown-toggle'>多语言</a>
+      <a href='#' class='dropdown-toggle'><%= t('site.multi_languages') %></a>
         <ul class='d-menu place-right' data-role='dropdown'>
-          <li><a href='<%= locale_path(locale: :zh_CN) %>'>中文简体</a>
-          <li><a href='<%= locale_path(locale: :jp) %>'>日语</a>
+          <li><a href='<%= locale_path(locale: :'zh-CN') %>'><%= t('site.chinese') %></a>
+          <li><a href='<%= locale_path(locale: :ja) %>'><%= t('site.japanese') %></a>
         </ul>
       </li>
     </ul>

@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   end
 
   def locale
-    locale = params[:local]
-    I18n.default_locale = locale.to_sym
+    locale = params[:locale]
+    I18n.locale = locale.to_sym
     redirect_to :back
   rescue => _
     redirect_to :back
