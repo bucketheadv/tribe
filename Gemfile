@@ -48,7 +48,7 @@ group :development do
   gem 'quiet_assets'
 end
 
-gem 'metro_ui_rails' #, github: 'sven199109/metro_ui_rails'
+gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~>4.4.0'
 gem 'gretel', '~> 3.0.8' # For breadcrumb
@@ -60,4 +60,4 @@ gem 'tagsinput-rails', '~> 1.3.3'
 gem 'dalli', '~> 2.7.6'
 gem 'rdiscount', '~> 2.1.8'
 #gem 'pagedown-rails'
-gem 'simditor_rails', '~> 0.0.1'
+gem 'simditor_rails', github: 'sven199109/simditor_rails' #'~> 0.0.1'
