@@ -13,8 +13,10 @@ zh-CN:
     about: 关于我
     contact: 联系我
     source_code: 网站源码
-    location: 您当前的位置
+    location: '您当前的位置:'
     albums: 相册
+    admin:
+      name: '斯文部落后台管理'
   article:
     published_at: "发布于%{string}前"
   datetime:

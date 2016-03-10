@@ -1,0 +1,25 @@
+zh-CN:
+  activerecord:
+    models:
+      article: 文章
+      category: 分类
+    attributes:
+      article:
+        title: 标题
+        body:  内容
+        published: 是否发布
+        tags: 标签 
+        category: 分类
+      category:
+        name: 名称
+    errors:
+      models:
+        article:
+          attributes:
+            title:
+              blank: 不能为空
+        category:
+          attributes:
+            name: 
+              blank: 不能为空
+              taken: 已经被使用
