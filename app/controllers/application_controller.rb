@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
     locale = params[:locale]
     I18n.locale = locale.to_sym
     redirect_to :back
-  rescue => _
+  rescue => e
+    p e
     redirect_to :back
   end
 end

@@ -14,7 +14,6 @@ class Admin::CategoriesController < AdminController
       flash[:success] = 'Category saved.'
       redirect_to action: :index
     else
-      flash.now[:error] = 'Category save failed.'
       render :new
     end
   end
@@ -27,7 +26,6 @@ class Admin::CategoriesController < AdminController
       flash[:success] = 'Category updated.'
       redirect_to action: :index
     else
-      flash.now[:error] = 'Category update failed.'
       render :edit
     end
   end

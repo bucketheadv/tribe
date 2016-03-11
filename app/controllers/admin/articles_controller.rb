@@ -14,7 +14,6 @@ class Admin::ArticlesController < AdminController
       flash[:success] = "Article saved."
       redirect_to action: :index
     else
-      flash.now[:error] = "Article save failed."
       render :new
     end
   end
@@ -27,7 +26,6 @@ class Admin::ArticlesController < AdminController
       flash[:success] = "Article Updated."
       redirect_to action: :index
     else
-      flash.now[:error] = "Article save failed."
       render :edit
     end
   end

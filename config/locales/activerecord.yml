@@ -12,14 +12,19 @@ zh-CN:
         category: 分类
       category:
         name: 名称
-    errors:
-      models:
-        article:
-          attributes:
-            title:
-              blank: 不能为空
-        category:
-          attributes:
-            name: 
-              blank: 不能为空
-              taken: 已经被使用
+        image: 图片
+ja:
+  activerecord:
+    models:
+      article: 文章
+      category: カテゴリー
+    attributes:
+      article:
+        title: タイトル
+        body:  内容
+        published: 発表かどうか
+        tags: タグ 
+        category: カテゴリー
+      category:
+        name: ネーム
+        image: イメージ

@@ -1,0 +1,28 @@
+ja:
+  site:
+    name: 斯文の部落
+    home: ホームページ
+    articles:  文章
+    archives: アーカイブ
+    tags:     タグ
+    categories: カテゴリー
+    multi_languages: 多言語
+    chinese: 中国語
+    japanese: 日本語
+    english: 英語
+    about: 俺について
+    contact: コンタクト
+    source_code: このサイトのコード
+    location: '今の位置:'
+    albums: アルバム
+    admin:
+      name: '斯文の部落管理システム'
+  article:
+    published_at: "%{string}前発表"
+  views:
+    pagination:
+      first: '&laquo; 第一ページ'
+      last: '末ページ &raquo;'
+      previous: '&laquo; 前のページ'
+      next: '次のページ &raquo;'
+      truncate: '...'

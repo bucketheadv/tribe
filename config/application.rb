@@ -22,7 +22,7 @@ module Tribe
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml')]
-    config.i18n.default_locale = :'zh-CN'
+    config.i18n.default_locale = :ja #:'zh-CN'
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
