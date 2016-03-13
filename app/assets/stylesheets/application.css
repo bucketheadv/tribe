@@ -14,6 +14,7 @@
  *= require_self
  *= require metro-ui
  *= require simditor
+ *= require highlight_js/github
  *= require jquery.tagsinput
  */
 

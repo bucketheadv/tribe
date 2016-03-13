@@ -16,4 +16,6 @@
 //= require turbolinks
 //= require simditor-ui
 //= require metro
+//= require highlight_js/highlight
+//= require highlight_js/languages/ruby
 //= require_tree .
