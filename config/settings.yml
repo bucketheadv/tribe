@@ -1,0 +1,4 @@
+articles:
+  published: true
+paginates:
+  per_page: 10

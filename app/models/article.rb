@@ -3,10 +3,10 @@ class Article < ActiveRecord::Base
   validates :title, presence: true
 
   acts_as_taggable
-  paginates_per 5
+  paginates_per Settings.paginates.per_page
 
   default_scope -> { order(id: :desc) }
-  scope :published, -> { where(published: true) }
+  scope :published, -> { where(published: Settings.articles.published) }
 
   class << self
     def query(params)
