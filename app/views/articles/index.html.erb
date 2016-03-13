@@ -10,6 +10,7 @@
             </p>
             <small>
               <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>
+              <%= t('activerecord.models.category') %>: <%= article&.category&.name %>
             </small>
           </blockquote>
           <hr class='thin'></hr>
