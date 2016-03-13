@@ -9,7 +9,7 @@
             <% next if ta.nil? %>
             <div class="cell">
               <% color = tag_color(ta) %>
-              <a href="<%= articles_path(tag: ta.name) %>" class="button <%= color %> block-shadow-<%= color %> text-shadow"><%= ta.name %>(<%= ta.taggings_count %>)</a>
+              <a href="<%= articles_path(tag: ta.name) %>" class="button <%= color %> block-shadow-<%= color %> text-shadow"><%= ta.name %>(<%= articles_count_of_tag(ta) %>)</a>
             </div>
           <% end %>
         </div>
