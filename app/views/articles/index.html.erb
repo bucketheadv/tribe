@@ -9,8 +9,10 @@
             <%= link_to article.title, article, "data-no-turbolink" => true %>
             </p>
             <small>
+              <span class="mif-user"></span>
               <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>
-              <%= t('activerecord.models.category') %>: <%= article.try(:category).try(:name) %>
+              <span class="mif-tags"></span> 
+              <%= article.try(:category).try(:name) %>
             </small>
           </blockquote>
           <hr class='thin'></hr>
