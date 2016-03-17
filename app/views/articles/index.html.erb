@@ -10,7 +10,7 @@
             </p>
             <small>
               <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>
-              <%= t('activerecord.models.category') %>: <%= article&.category&.name %>
+              <%= t('activerecord.models.category') %>: <%= article.try(:category).try(:name) %>
             </small>
           </blockquote>
           <hr class='thin'></hr>

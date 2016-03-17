@@ -49,7 +49,7 @@ group :development do
   gem 'quiet_assets'
 end
 
-gem 'metro_ui_rails' #, github: 'sven199109/metro_ui_rails'
+gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~>4.4.0'
 gem 'gretel', '~> 3.0.8' # For breadcrumb

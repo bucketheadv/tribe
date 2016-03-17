@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/sven199109/metro_ui_rails.git
+  revision: e344e61fc290b553b36663234ba2da8c64d12986
+  specs:
+    metro_ui_rails (0.0.1)
+      rails (~> 4.2.5)
+
+GIT
   remote: git://github.com/sven199109/simditor_rails.git
   revision: 2b508246f6d64a055101c3ea33b4241569f93c2a
   specs:
@@ -102,8 +109,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    metro_ui_rails (0.1.0)
-      rails (~> 4.2.5)
     mime-types (2.99.1)
     mini_magick (4.4.0)
     mini_portile2 (2.0.0)
@@ -234,7 +239,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari (~> 0.16.3)
-  metro_ui_rails
+  metro_ui_rails!
   mini_magick (~> 4.4.0)
   mysql2 (>= 0.3.13, < 0.5)
   omniauth (~> 1.3.1)
