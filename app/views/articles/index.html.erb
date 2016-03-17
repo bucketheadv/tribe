@@ -6,7 +6,7 @@
         <div class="example"> <!-- data-text="blockquote" -->
           <blockquote>
             <p>
-            <%= link_to article.title, article %>
+            <%= link_to article.title, article, "data-no-turbolink" => true %>
             </p>
             <small>
               <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>
