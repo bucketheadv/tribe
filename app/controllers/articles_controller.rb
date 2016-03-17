@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
 
   protected
   def set_article
-    @article = Article.find(params[:id])
+    @article = Article.where(published: Settings.articles.published).find(params[:id])
   rescue ActiveRecord::RecordNotFound => _
     render_404
   end
