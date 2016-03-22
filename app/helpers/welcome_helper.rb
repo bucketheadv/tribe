@@ -23,7 +23,7 @@ module WelcomeHelper
 
   def archive_dates
     Rails.cache.fetch("archive_dates", expires_in: 1.hours) do 
-      ActiveRecord::Base.connection.exec_query("SELECT date_format(created_at, '%Y-%m') AS created_at, count(*) AS cnt FROM articles WHERE published = #{Settings.articles.published} GROUP BY date_format(created_at, '%Y-%m') ORDER BY created_at DESC;")
+      ActiveRecord::Base.connection.exec_query("SELECT date_format(created_at, '%Y-%m') AS created_at, count(*) AS cnt FROM articles WHERE published = true GROUP BY date_format(created_at, '%Y-%m') ORDER BY created_at DESC;")
     end
   end
 end

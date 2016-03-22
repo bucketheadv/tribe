@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   paginates_per Settings.paginates.per_page
 
   default_scope -> { order(id: :desc) }
-  scope :published, -> { where(published: Settings.articles.published) }
+  scope :published, -> { where(published: true) }
 
   class << self
     def query(params)
