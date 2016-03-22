@@ -38,6 +38,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'faker'
+  gem 'passenger'
 end
 
 group :development do
@@ -47,10 +48,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'quiet_assets'
-end
-
-group :production do 
-  gem 'puma'
 end
 
 gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
@@ -68,3 +65,4 @@ gem 'simditor_rails', github: 'sven199109/simditor_rails' #'~> 0.0.1'
 gem 'config', '~> 1.0.0'
 gem 'rails_config', '~> 0.99.0'
 gem 'highlight_js-rails'
+gem 'devise'

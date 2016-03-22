@@ -8,12 +8,12 @@
   <div class="app-bar-element place-right active-container">
     <span class="dropdown-toggle">
       <span class="mif-cog"></span>
-      UserName
+      <%= current_user.email %>
     </span>
     <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" style="width: 220px; display: none;" data-no-close="true" data-role="dropdown">
       <ul class="unstyled-list fg-dark">
         <li>
-          <a href="" class="fg-white1 fg-hover-yellow">Profile</a>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'fg-white1 fg-hover-yellow'%>
         </li>
       </ul>
     </div>
