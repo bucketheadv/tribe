@@ -9,7 +9,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     if @article.save
       flash[:success] = "Article saved."
       redirect_to action: :index
