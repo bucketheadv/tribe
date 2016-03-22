@@ -10,9 +10,16 @@
             </p>
             <small>
               <span class="mif-user"></span>
-              <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>
-              <span class="mif-tags"></span> 
-              <%= article.try(:category).try(:name) %>
+              <%= article.author.try(:email) %>&nbsp;
+              <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>&nbsp;
+              <% if article.category %>
+                <span class="mif-tree"></span> 
+                <%= link_to article.category.name, articles_path(category_id: article.category) %>&nbsp;
+              <% end %>
+              <% if article.tags.present? %>
+                <span class="mif-tags"></span> 
+                <%= article.tags.map { |ta| link_to ta.name, articles_path(tag: ta.name) }.join("&nbsp;").html_safe %>
+              <% end %>
             </small>
           </blockquote>
           <hr class='thin'></hr>

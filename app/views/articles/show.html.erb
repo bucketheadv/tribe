@@ -15,16 +15,20 @@
               <small>
                 <span class="mif-user"></span>
                 <%= t("article.published_at", string: time_ago_in_words(@article.created_at)) %>
-                <span class="mif-tags"></span> 
-                <%= @article.tags.map { |ta| link_to ta.name, articles_path(tag: ta.name) }.join("&nbsp;").html_safe %>
+                <% if @article.category %>
+                  <span class="mif-tree"></span> 
+                  <%= link_to @article.category.name, articles_path(category_id: @article.category) %>
+                <% end %>
+                <% if @article.tags.present? %>
+                  <span class="mif-tags"></span> 
+                  <%= @article.tags.map { |ta| link_to ta.name, articles_path(tag: ta.name) }.join("&nbsp;").html_safe %>
+                <% end %>
               </small>
             </blockquote>
           </h4>
           <hr class="bg-red"></hr>
-          <div>
-            <h4>
-              <%= sanitize(@article.body) %>
-            </h4>
+          <div class='example'>
+            <%= sanitize(@article.body) %>
           </div>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 class Admin::CategoriesController < AdminController
-  before_action :set_category, only: [:edit, :update]
+  before_action :set_category, only: [:edit, :update, :destroy]
   def index
     @categories = Category.page(params[:page] || 1)
   end
@@ -28,6 +28,12 @@ class Admin::CategoriesController < AdminController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @category.destroy
+    flash[:success] = 'Category destroyed.'
+    redirect_to action: :index
   end
 
   protected
