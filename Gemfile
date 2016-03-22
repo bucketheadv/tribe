@@ -49,21 +49,22 @@ group :development do
   gem 'quiet_assets'
 end
 
+group :production do 
+  gem 'puma'
+end
+
 gem 'metro_ui_rails', github: 'sven199109/metro_ui_rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~>4.4.0'
 gem 'gretel', '~> 3.0.8' # For breadcrumb
 gem 'kaminari', '~> 0.16.3'
-gem 'foreman'
-# gem 'puma'
+# gem 'foreman'
 gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'tagsinput-rails', '~> 1.3.3'
 gem 'dalli', '~> 2.7.6'
-gem 'rdiscount', '~> 2.1.8'
+#gem 'rdiscount', '~> 2.1.8'
 #gem 'pagedown-rails'
 gem 'simditor_rails', github: 'sven199109/simditor_rails' #'~> 0.0.1'
 gem 'config', '~> 1.0.0'
 gem 'rails_config', '~> 0.99.0'
-gem 'omniauth', '~> 1.3.1'
-gem 'omniauth-oauth2', '~> 1.4.0'
 gem 'highlight_js-rails'

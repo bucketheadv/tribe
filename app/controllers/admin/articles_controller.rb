@@ -31,6 +31,9 @@ class Admin::ArticlesController < AdminController
   end
 
   def destroy
+    @article.update_attributes(published: false)
+    flash[:success] = 'Article unpublished.'
+    redirect_to action: :index
   end
 
   protected
