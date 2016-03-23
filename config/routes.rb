@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  match "/users/sign_up" => redirect("/users/sign_in"), via: [:get, :post] if Rails.env.production?
   devise_for :users
   root to: 'articles#index'
 
