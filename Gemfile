@@ -38,7 +38,13 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'faker'
-  gem 'passenger'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-ext'
+  gem 'capistrano-passenger'
+  # gem 'capistrano-passenger'
 end
 
 group :development do
@@ -55,6 +61,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~>4.4.0'
 gem 'gretel', '~> 3.0.8' # For breadcrumb
 gem 'kaminari', '~> 0.16.3'
+gem 'passenger'
 # gem 'foreman'
 gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'tagsinput-rails', '~> 1.3.3'
