@@ -43,7 +43,8 @@ group :development, :test do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-ext'
-  gem 'capistrano-passenger'
+  # gem 'capistrano-passenger'
+  gem 'capistrano3-puma' 
   # gem 'capistrano-passenger'
 end
 
@@ -61,7 +62,8 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~>4.4.0'
 gem 'gretel', '~> 3.0.8' # For breadcrumb
 gem 'kaminari', '~> 0.16.3'
-gem 'passenger'
+# gem 'passenger'
+gem 'puma'
 # gem 'foreman'
 gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'tagsinput-rails', '~> 1.3.3'

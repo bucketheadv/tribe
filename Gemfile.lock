@@ -67,14 +67,15 @@ GEM
       sshkit (~> 1.2)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
-    capistrano-passenger (0.2.0)
-      capistrano (~> 3.0)
     capistrano-rails (1.1.6)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano3-puma (1.2.1)
+      capistrano (~> 3.0)
+      puma (>= 2.6)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -143,6 +144,7 @@ GEM
     passenger (5.0.26)
       rack
       rake (>= 0.8.1)
+    puma (3.0.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -249,9 +251,9 @@ DEPENDENCIES
   capistrano
   capistrano-bundler
   capistrano-ext
-  capistrano-passenger
   capistrano-rails
   capistrano-rvm
+  capistrano3-puma
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   config (~> 1.0.0)
