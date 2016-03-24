@@ -10,7 +10,7 @@
             </p>
             <small>
               <span class="mif-user"></span>
-              <%= article.author.try(:email) %>&nbsp;
+              <%= article.author_email %>&nbsp;
               <%= t("article.published_at", string: time_ago_in_words(article.created_at)) %>&nbsp;
               <% if article.category %>
                 <span class="mif-tree"></span> 

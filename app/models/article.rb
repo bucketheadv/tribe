@@ -3,6 +3,8 @@ class Article < ActiveRecord::Base
   belongs_to :author, class_name: 'User', foreign_key: :author_id
   validates :title, presence: true
 
+  delegate :email, to: "author", prefix: :author, allow_nil: true
+
   acts_as_taggable
   paginates_per Settings.paginates.per_page
 
