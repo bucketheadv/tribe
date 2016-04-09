@@ -140,6 +140,7 @@ GEM
     net-ssh (3.0.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    nprogress-rails (0.1.6.7)
     orm_adapter (0.5.0)
     puma (3.0.2)
     quiet_assets (1.1.0)
@@ -265,6 +266,7 @@ DEPENDENCIES
   metro_ui_rails!
   mini_magick (~> 4.4.0)
   mysql2 (>= 0.3.13, < 0.5)
+  nprogress-rails
   puma
   quiet_assets
   rails (= 4.2.5.1)

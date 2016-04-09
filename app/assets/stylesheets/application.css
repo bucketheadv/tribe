@@ -14,6 +14,8 @@
  *= require_self
  *= require metro-ui
  *= require simditor
+ *= require nprogress
+ *= require nprogress-bootstrap
  *= require highlight_js/pojoaque
  *= require jquery.tagsinput
  */
