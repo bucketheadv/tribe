@@ -21,7 +21,7 @@
                 <% end %>
                 <% if @article.tags.present? %>
                   <span class="mif-tags"></span> 
-                  <%= @article.tags.map { |ta| link_to ta.name, articles_path(tag: ta.name) }.join("&nbsp;").html_safe %>
+                  <%= sanitize @article.tags.map { |ta| link_to ta.name, articles_path(tag: ta.name) }.join("&nbsp;") %>
                 <% end %>
               </small>
             </blockquote>
